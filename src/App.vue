@@ -2,7 +2,7 @@
   <div id="app">
     <nav-bar></nav-bar>
     <section>
-      <div id="nav">
+      <div id="nav" class="animated fadeIn">
         <router-link to="/">Home</router-link>|
         <router-link to="/about">About</router-link>
       </div>

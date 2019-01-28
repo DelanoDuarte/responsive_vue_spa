@@ -1,6 +1,6 @@
 <template>
-  <v-card class="mx-auto elevation-20" color="purple" dark style="max-width: 400px;">
-    <v-layout justify-space-between>
+  <v-card class="animated bounceInRigth" color="primary" dark style="max-width: 400px;">
+    <v-layout align-center justify-center fill-height>
       <v-flex xs8>
         <v-card-title primary-title>
           <div>
@@ -21,13 +21,12 @@
     <v-divider dark></v-divider>
     <v-card-actions class="pa-3">Rate this album
       <v-spacer></v-spacer>
-      <span class="grey--text text--lighten-2 caption mr-2">({{ rating }})</span>
+      <span class="grey--text text--lighten-2 caption mr-2">({{ formatRatingText(rating) }})</span>
       <v-rating
         v-model="rating"
         background-color="white"
         color="yellow accent-4"
         dense
-        half-increments
         hover
         size="18"
       ></v-rating>
@@ -42,6 +41,33 @@ export default {
     return {
       rating: 0
     };
+  },
+  methods: {
+    formatRatingText(rating) {
+      return `${rating} - ${this.returnTextTypeBasedOnRating(rating)}`;
+    },
+
+    returnTextTypeBasedOnRating(rating) {
+      switch (rating) {
+        case 0 && rating < 1:
+          return "Urrrgh !!";
+
+        case 1 || (rating < 2 && rating > 1):
+          return "Try again next time ...";
+
+        case 2 || (rating < 3 && rating > 2):
+          return "Could be better.";
+
+        case 3 || (rating < 4 && rating > 3):
+          return "OK !!";
+
+        case 4 || (rating < 5 && rating > 4):
+          return "Nice, I like it ...";
+
+        case 5:
+          return "Yeaah Baby,Awesome !";
+      }
+    }
   }
 };
 </script>
