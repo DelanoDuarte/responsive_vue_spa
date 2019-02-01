@@ -1,5 +1,18 @@
 <template>
-  <div class="about animated fadeIn">
-    <h1>This is an about page</h1>
+  <div>
+    <about-me-component></about-me-component>
+    <v-spacer></v-spacer>
+    <skills-card-component></skills-card-component>
   </div>
 </template>
+
+<script>
+import AboutMeComponent from "@/components/about/AboutMeComponent.vue";
+import SkillsCardComponent from "@/components/about/SkillsCardComponent.vue";
+export default {
+  components: {
+    AboutMeComponent,
+    SkillsCardComponent
+  }
+};
+</script>

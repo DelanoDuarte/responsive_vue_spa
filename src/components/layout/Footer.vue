@@ -1,17 +1,17 @@
 <template>
   <div class="bottom_menu">
-    <v-bottom-nav class="navbottom animated bounceInLeft" fixed color="dark" :active.sync="path">
-      <v-btn color="teal" flat value="/" @click="goTo('/')">
+    <v-bottom-nav class="navbottom animated bounceInLeft" fixed color="white" :active.sync="path">
+      <v-btn color="blue" flat value="/" @click="goTo('/')">
         <span>Home</span>
         <v-icon>fas fa-home</v-icon>
       </v-btn>
 
-      <v-btn color="teal" flat value="/about" @click="goTo('/about')">
+      <v-btn color="blue" flat value="/about" @click="goTo('/about')">
         <span>About Me</span>
         <v-icon>fas fa-user-circle</v-icon>
       </v-btn>
 
-      <v-btn color="teal" flat value="/location">
+      <v-btn color="blue" flat value="/location">
         <span>Location</span>
         <v-icon>fas fa-map-marker</v-icon>
       </v-btn>

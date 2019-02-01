@@ -2,10 +2,10 @@
   <div id="app">
     <nav-bar></nav-bar>
     <section>
-      <div id="nav" class="animated fadeIn">
+      <!-- <div id="nav" class="animated fadeIn">
         <router-link to="/">Home</router-link>|
         <router-link to="/about">About</router-link>
-      </div>
+      </div>-->
       <router-view/>
     </section>
 
@@ -44,5 +44,9 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+section {
+  padding-top: 10px;
 }
 </style>

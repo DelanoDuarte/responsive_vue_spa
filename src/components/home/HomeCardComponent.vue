@@ -1,5 +1,5 @@
 <template>
-  <v-card class="animated bounceInRigth" color="primary" dark style="max-width: 400px;">
+  <v-card class="animated bounceInRigth" color="cyan darken-2" dark style="max-width: 400px;">
     <v-layout align-center justify-center fill-height>
       <v-flex xs8>
         <v-card-title primary-title>

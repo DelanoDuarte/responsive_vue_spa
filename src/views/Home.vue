@@ -3,7 +3,16 @@
     <v-card>
       <v-container fluid grid-list-lg>
         <v-layout row wrap>
-          <v-flex v-for="i in 3" :key="`4${i}`">
+          <v-flex>
+            <!-- v-for="i in 3" :key="`4${i}`" -->
+            <home-card-component></home-card-component>
+          </v-flex>
+          <v-flex>
+            <!-- v-for="i in 3" :key="`4${i}`" -->
+            <home-card-component></home-card-component>
+          </v-flex>
+          <v-flex>
+            <!-- v-for="i in 3" :key="`4${i}`" -->
             <home-card-component></home-card-component>
           </v-flex>
         </v-layout>
